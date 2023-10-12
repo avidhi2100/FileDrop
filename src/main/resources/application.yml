@@ -1,0 +1,21 @@
+aws:
+  region: us-east-1
+  s3:
+    buckets:
+      user: filedrop-bucket
+
+spring:
+  datasource:
+    username: admin
+    password: filedrop
+    url: jdbc:mysql://filedrop-instance.cxdhcf3ryzir.us-east-1.rds.amazonaws.com:3306/filedrop?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
