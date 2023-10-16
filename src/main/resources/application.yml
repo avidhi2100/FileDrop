@@ -1,14 +1,14 @@
 aws:
-  region: us-east-1
+  region: region-name
   s3:
     buckets:
-      user: filedrop-bucket
+      user: bucket-name
 
 spring:
   datasource:
-    username: admin
-    password: filedrop
-    url: jdbc:mysql://filedrop-instance.cxdhcf3ryzir.us-east-1.rds.amazonaws.com:3306/filedrop?useSSL=false
+    username: db-user-name
+    password: db-user-password
+    url: host-url
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:

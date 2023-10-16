@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     private final AWSService awsService;
     private final S3Buckets s3Buckets;
     private final FileRepository fileRepository;
-    private static final String sns_topic_name = "arn:aws:sns:us-east-1:265087441230:filedrop-subscription";
+    private static final String sns_topic_name = "**sns-topic-name**";
 
     public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, AWSService awsService, S3Buckets s3Buckets, FileRepository fileRepository) {
         this.userRepository = userRepository;
@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
         file2.setFileName(file.getOriginalFilename());
         file2.setCreatedOn(Timestamp.from(Instant.now()));
         file2.setUpdatedOn(Timestamp.from(Instant.now()));
-        file2.setFileURL("https://d1i0of8dt6gu69.cloudfront.net/"+ userName+"/"+file.getOriginalFilename());
+        file2.setFileURL("**cloudfront-url**"+ userName+"/"+file.getOriginalFilename());
         fileRepository.save(file2);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -108,7 +108,7 @@ public class UserServiceImpl implements UserService {
         file1.setFileName(file.getOriginalFilename());
         file1.setFileDescription(fileDescription);
         file1.setUpdatedOn(Timestamp.from(Instant.now()));
-        file1.setFileURL("https://d21dewuz2s95dd.cloudfront.net/"+ userName+"/"+file.getOriginalFilename());
+        file1.setFileURL("**cloudfront-url**"+ userName+"/"+file.getOriginalFilename());
         fileRepository.save(file1);
         return new ResponseEntity<>("File updated successfully",HttpStatus.OK);
     }
