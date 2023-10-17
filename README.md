@@ -9,7 +9,6 @@ The web application has the following functionality for authorized users:
     ![](images/Login.png)
 3) Upload Files:Files with max size upto 10MB can be uploaded. A small file description can also be added.
    ![](images/Upload.png)
-
 4) Delete Files
 5) Download Files
 The files can be downloaded by clicking on the download button. For the download functionality CloudFront links are leveraged
