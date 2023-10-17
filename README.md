@@ -18,4 +18,5 @@ The files can be downloaded by clicking on the download button. For the download
 The admin can view the files uploaded by all users and can also delete those files
 
 # Architecture:
+
 ![](images/Architecture.png)
